@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
 
         body {
             font-family: 'Quicksand', sans-serif;
-            background: linear-gradient(135deg, #faf6f1 0%, #f5efe8 50%, #f0e9e0 100%);
+            background: linear-gradient(135deg, #fdf8f5 0%, #faf0e6 50%, #f5e6d3 100%);
             overflow-x: hidden;
             min-height: 100vh;
         }
@@ -24,7 +25,7 @@
             width: 300px;
             height: 400px;
             margin: 0 auto;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.08));
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.08));
         }
 
         .lily-petal {
@@ -33,24 +34,51 @@
             animation: bloom 2s ease-out forwards;
         }
 
-        .lily-petal:nth-child(1) { animation-delay: 0.2s; }
-        .lily-petal:nth-child(2) { animation-delay: 0.4s; }
-        .lily-petal:nth-child(3) { animation-delay: 0.6s; }
-        .lily-petal:nth-child(4) { animation-delay: 0.8s; }
-        .lily-petal:nth-child(5) { animation-delay: 1s; }
-        .lily-petal:nth-child(6) { animation-delay: 1.2s; }
+        .lily-petal:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .lily-petal:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .lily-petal:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .lily-petal:nth-child(4) {
+            animation-delay: 0.8s;
+        }
+
+        .lily-petal:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        .lily-petal:nth-child(6) {
+            animation-delay: 1.2s;
+        }
 
         @keyframes bloom {
-            0% { transform: scale(0) rotate(-10deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+            0% {
+                transform: scale(0) rotate(-10deg);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
         }
 
         .floating-petal {
             position: absolute;
             width: 20px;
             height: 20px;
-            background: linear-gradient(135deg, #fff9f5 0%, #fff0e8 100%);
+            background: linear-gradient(135deg, #b8a090 0%, #b8a090 100%);
             border-radius: 0 100% 0 100%;
             opacity: 0.6;
             animation: float 15s infinite ease-in-out;
@@ -58,10 +86,25 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(100vh) rotate(0deg) translateX(0); opacity: 0; }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(-100vh) rotate(720deg) translateX(50px); opacity: 0; }
+
+            0%,
+            100% {
+                transform: translateY(100vh) rotate(0deg) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.6;
+            }
+
+            90% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(720deg) translateX(50px);
+                opacity: 0;
+            }
         }
 
         .reveal-text {
@@ -70,13 +113,27 @@
             animation: fadeUp 1s ease-out forwards;
         }
 
-        .reveal-text:nth-child(1) { animation-delay: 1.5s; }
-        .reveal-text:nth-child(2) { animation-delay: 1.8s; }
-        .reveal-text:nth-child(3) { animation-delay: 2.1s; }
-        .reveal-text:nth-child(4) { animation-delay: 2.4s; }
+        .reveal-text:nth-child(1) {
+            animation-delay: 1.5s;
+        }
+
+        .reveal-text:nth-child(2) {
+            animation-delay: 1.8s;
+        }
+
+        .reveal-text:nth-child(3) {
+            animation-delay: 2.1s;
+        }
+
+        .reveal-text:nth-child(4) {
+            animation-delay: 2.4s;
+        }
 
         @keyframes fadeUp {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .burger-icon {
@@ -89,8 +146,15 @@
         }
 
         @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-3px);
+            }
         }
 
         .heart-icon {
@@ -114,8 +178,17 @@
         }
 
         @keyframes heart-pulse {
-            0%, 100% { transform: scale(1); opacity: 0.9; }
-            50% { transform: scale(1.1); opacity: 1; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
         }
 
         .sparkle {
@@ -129,37 +202,43 @@
         }
 
         @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 0.6; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #a08070 0%, #8b7355 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 600;
+            color: #ffffff;
+            font-weight: 800;
         }
 
         .glass-card {
-            background: rgba(255, 253, 250, 0.95);
+            background: #b8a090;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            box-shadow: 0 30px 60px -12px rgba(139, 119, 101, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 30px 60px -12px rgba(92, 75, 61, 0.3);
         }
 
         .love-btn {
-            background: linear-gradient(135deg, #b8a090 0%, #a08070 100%);
-            color: #fff;
+            background: #ffffff;
+            color: #b8a090;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             letter-spacing: 0.05em;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .love-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 20px 40px -10px rgba(160, 128, 112, 0.4);
-            background: linear-gradient(135deg, #a08070 0%, #8b7355 100%);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+            background: #faf6f1;
         }
 
         .texture-overlay {
@@ -173,12 +252,24 @@
             z-index: 1;
         }
 
-        .text-dark { color: #5c4b3d; }
-        .text-medium { color: #6b5b4f; }
-        .text-light { color: #7d6e63; }
-        .quote-text { color: #a08070; }
+        .text-dark {
+            color: #ffffff;
+        }
+
+        .text-medium {
+            color: #fdf8f5;
+        }
+
+        .text-light {
+            color: #fdf8f5;
+        }
+
+        .quote-text {
+            color: #ffffff;
+        }
     </style>
 </head>
+
 <body class="min-h-screen relative">
     <div class="texture-overlay"></div>
     <div id="petals-container"></div>
@@ -192,60 +283,72 @@
 
             <div class="lily-wrapper mb-10">
                 <svg viewBox="0 0 200 300" class="w-full h-full">
-                    <line x1="100" y1="300" x2="100" y2="150" stroke="#7c9a6b" stroke-width="4" stroke-linecap="round" class="lily-petal" style="transform-origin: bottom; animation-delay: 0s;"/>
-                    <path d="M100 250 Q70 220 60 180 Q80 200 100 230" fill="#8faa7a" class="lily-petal"/>
-                    <path d="M100 220 Q130 190 140 160 Q120 180 100 200" fill="#8faa7a" class="lily-petal"/>
-                    <ellipse cx="100" cy="120" rx="25" ry="60" fill="#fff0f5" transform="rotate(-30 100 150)" class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1"/>
-                    <ellipse cx="100" cy="120" rx="25" ry="60" fill="#fff0f5" transform="rotate(30 100 150)" class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1"/>
-                    <ellipse cx="100" cy="110" rx="25" ry="60" fill="#fff5f8" transform="rotate(0 100 150)" class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1"/>
-                    <ellipse cx="85" cy="130" rx="22" ry="55" fill="#ffffff" transform="rotate(-15 100 150)" class="lily-petal" stroke="#ffe4e1" stroke-width="1"/>
-                    <ellipse cx="115" cy="130" rx="22" ry="55" fill="#ffffff" transform="rotate(15 100 150)" class="lily-petal" stroke="#ffe4e1" stroke-width="1"/>
-                    <ellipse cx="100" cy="125" rx="20" ry="50" fill="#ffffff" class="lily-petal" stroke="#ffe4e1" stroke-width="1"/>
-                    <circle cx="100" cy="100" r="8" fill="#ffd700" class="lily-petal" opacity="0.9"/>
-                    <line x1="100" y1="100" x2="90" y2="80" stroke="#5a4a3a" stroke-width="2" class="lily-petal"/>
-                    <line x1="100" y1="100" x2="110" y2="80" stroke="#5a4a3a" stroke-width="2" class="lily-petal"/>
-                    <line x1="100" y1="100" x2="100" y2="75" stroke="#5a4a3a" stroke-width="2" class="lily-petal"/>
-                    <circle cx="90" cy="80" r="3" fill="#6b4423" class="lily-petal"/>
-                    <circle cx="110" cy="80" r="3" fill="#6b4423" class="lily-petal"/>
-                    <circle cx="100" cy="75" r="3" fill="#6b4423" class="lily-petal"/>
+                    <line x1="100" y1="300" x2="100" y2="150" stroke="#7c9a6b" stroke-width="4" stroke-linecap="round"
+                        class="lily-petal" style="transform-origin: bottom; animation-delay: 0s;" />
+                    <path d="M100 250 Q70 220 60 180 Q80 200 100 230" fill="#8faa7a" class="lily-petal" />
+                    <path d="M100 220 Q130 190 140 160 Q120 180 100 200" fill="#8faa7a" class="lily-petal" />
+                    <ellipse cx="100" cy="120" rx="25" ry="60" fill="#fff0f5" transform="rotate(-30 100 150)"
+                        class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1" />
+                    <ellipse cx="100" cy="120" rx="25" ry="60" fill="#fff0f5" transform="rotate(30 100 150)"
+                        class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1" />
+                    <ellipse cx="100" cy="110" rx="25" ry="60" fill="#fff5f8" transform="rotate(0 100 150)"
+                        class="lily-petal" opacity="0.9" stroke="#ffe4e1" stroke-width="1" />
+                    <ellipse cx="85" cy="130" rx="22" ry="55" fill="#ffffff" transform="rotate(-15 100 150)"
+                        class="lily-petal" stroke="#ffe4e1" stroke-width="1" />
+                    <ellipse cx="115" cy="130" rx="22" ry="55" fill="#ffffff" transform="rotate(15 100 150)"
+                        class="lily-petal" stroke="#ffe4e1" stroke-width="1" />
+                    <ellipse cx="100" cy="125" rx="20" ry="50" fill="#ffffff" class="lily-petal" stroke="#ffe4e1"
+                        stroke-width="1" />
+                    <circle cx="100" cy="100" r="8" fill="#ffd700" class="lily-petal" opacity="0.9" />
+                    <line x1="100" y1="100" x2="90" y2="80" stroke="#5a4a3a" stroke-width="2" class="lily-petal" />
+                    <line x1="100" y1="100" x2="110" y2="80" stroke="#5a4a3a" stroke-width="2" class="lily-petal" />
+                    <line x1="100" y1="100" x2="100" y2="75" stroke="#5a4a3a" stroke-width="2" class="lily-petal" />
+                    <circle cx="90" cy="80" r="3" fill="#6b4423" class="lily-petal" />
+                    <circle cx="110" cy="80" r="3" fill="#6b4423" class="lily-petal" />
+                    <circle cx="100" cy="75" r="3" fill="#6b4423" class="lily-petal" />
                 </svg>
             </div>
 
             <div class="space-y-5">
-                <h1 class="serif text-4xl md:text-5xl text-dark reveal-text tracking-wide font-semibold">
+                <h1 class="serif text-4xl md:text-5xl text-dark reveal-text tracking-wide font-bold">
                     For <span class="gradient-text italic">Zimia</span>
                 </h1>
-                
-                <div class="text-lg md:text-xl text-medium reveal-text space-y-3 leading-relaxed font-medium">
+
+                <div class="text-lg md:text-xl text-medium reveal-text space-y-3 leading-relaxed font-bold">
                     <p class="flex items-center justify-center gap-3 flex-wrap">
                         <span>Thank you for the surprise burger</span>
                         <svg class="burger-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 10C4 6 7 4 12 4C17 4 20 6 20 10" stroke="#8b7355" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                            <path d="M4 10H20" stroke="#8b7355" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M6 14H18" stroke="#a08070" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 2"/>
-                            <path d="M5 18H19" stroke="#8b7355" stroke-width="1.5" stroke-linecap="round"/>
-                            <path d="M4 18C4 20 7 21 12 21C17 21 20 20 20 18" stroke="#8b7355" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-                            <circle cx="7.5" cy="7" r="0.8" fill="#a08070"/>
-                            <circle cx="12" cy="6" r="0.8" fill="#a08070"/>
-                            <circle cx="16.5" cy="7" r="0.8" fill="#a08070"/>
+                            <path d="M4 10C4 6 7 4 12 4C17 4 20 6 20 10" stroke="#ffffff" stroke-width="2"
+                                stroke-linecap="round" fill="none" />
+                            <path d="M4 10H20" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                            <path d="M6 14H18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                stroke-dasharray="2 2" />
+                            <path d="M5 18H19" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+                            <path d="M4 18C4 20 7 21 12 21C17 21 20 20 20 18" stroke="#ffffff" stroke-width="2"
+                                stroke-linecap="round" fill="none" />
+                            <circle cx="7.5" cy="7" r="1" fill="#ffffff" />
+                            <circle cx="12" cy="6" r="1" fill="#ffffff" />
+                            <circle cx="16.5" cy="7" r="1" fill="#ffffff" />
                         </svg>
                     </p>
-                    <p class="text-base md:text-lg text-light font-normal">Didn't even see it coming on Foodpanda,</p>
-                    <p class="text-base md:text-lg text-light font-normal">but you made my whole day.</p>
+                    <p class="text-base md:text-lg text-light font-bold">Didn't even see it coming on Foodpanda,</p>
+                    <p class="text-base md:text-lg text-light font-bold">but you made my whole day.</p>
                 </div>
 
                 <div class="pt-6 reveal-text">
-                    <p class="serif text-2xl md:text-3xl quote-text italic tracking-wide font-medium">
+                    <p class="serif text-2xl md:text-3xl quote-text italic tracking-wide font-bold">
                         "Like a lily blooming unexpectedly"
                     </p>
                 </div>
 
                 <div class="pt-8 reveal-text">
-                    <p class="text-light text-sm md:text-base flex items-center justify-center gap-2 flex-wrap font-medium">
+                    <p
+                        class="text-light text-sm md:text-base flex items-center justify-center gap-2 flex-wrap font-bold">
                         <span>Enjoyed every bite</span>
                         <span class="heart-icon">
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.5 4.5C18.5 2.5 15.5 2.5 13.5 4.5L12 6L10.5 4.5C8.5 2.5 5.5 2.5 3.5 4.5C1.5 6.5 1.5 9.5 3.5 11.5L12 20L20.5 11.5C22.5 9.5 22.5 6.5 20.5 4.5Z"/>
+                                <path fill="#ffffff"
+                                    d="M20.5 4.5C18.5 2.5 15.5 2.5 13.5 4.5L12 6L10.5 4.5C8.5 2.5 5.5 2.5 3.5 4.5C1.5 6.5 1.5 9.5 3.5 11.5L12 20L20.5 11.5C22.5 9.5 22.5 6.5 20.5 4.5Z" />
                             </svg>
                         </span>
                         <span>You're the best kind of friend</span>
@@ -253,7 +356,8 @@
                 </div>
 
                 <div class="pt-10 reveal-text">
-                    <button onclick="createHeartBurst()" class="love-btn px-10 py-3 rounded-full text-sm shadow-lg cursor-pointer">
+                    <button onclick="createHeartBurst()"
+                        class="love-btn px-10 py-3 rounded-full text-sm shadow-lg cursor-pointer">
                         Send Love Back
                     </button>
                 </div>
@@ -263,7 +367,7 @@
 
     <script>
         const petalsContainer = document.getElementById('petals-container');
-        
+
         function createPetal() {
             const petal = document.createElement('div');
             petal.className = 'floating-petal';
@@ -285,7 +389,7 @@
             const button = event.target;
             const rect = button.getBoundingClientRect();
             const colors = ['#b8a090', '#a08070', '#8b7355', '#c9a890'];
-            
+
             for (let i = 0; i < 14; i++) {
                 const heart = document.createElement('div');
                 heart.style.position = 'fixed';
@@ -295,18 +399,18 @@
                 heart.style.height = '14px';
                 heart.style.pointerEvents = 'none';
                 heart.style.zIndex = '1000';
-                
+
                 heart.innerHTML = `
                     <svg viewBox="0 0 24 24" fill="none" stroke="${colors[Math.floor(Math.random() * colors.length)]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:100%; height:100%; overflow:visible;">
                         <path d="M20.5 4.5C18.5 2.5 15.5 2.5 13.5 4.5L12 6L10.5 4.5C8.5 2.5 5.5 2.5 3.5 4.5C1.5 6.5 1.5 9.5 3.5 11.5L12 20L20.5 11.5C22.5 9.5 22.5 6.5 20.5 4.5Z" style="filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));"/>
                     </svg>
                 `;
-                
+
                 document.body.appendChild(heart);
-                
+
                 const angle = (Math.PI * 2 * i) / 14;
                 const velocity = 60 + Math.random() * 60;
-                
+
                 heart.animate([
                     { transform: 'translate(0, 0) scale(0)', opacity: 1 },
                     { transform: `translate(${Math.cos(angle) * velocity}px, ${Math.sin(angle) * velocity - 80}px) scale(1)`, opacity: 0 }
@@ -315,7 +419,7 @@
                     easing: 'cubic-bezier(0, .9, .57, 1)',
                 }).onfinish = () => heart.remove();
             }
-            
+
             const originalText = button.innerText;
             button.innerText = 'Sent with love';
             setTimeout(() => button.innerText = originalText, 2000);
@@ -329,4 +433,5 @@
         });
     </script>
 </body>
+
 </html>
